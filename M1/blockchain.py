@@ -1,7 +1,6 @@
 import datetime
 import json
 import hashlib
-from urllib import response
 from flask import Flask, jsonify
 
 class Blockchain:

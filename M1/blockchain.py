@@ -81,6 +81,13 @@ def mine_block():
     }
     return jsonify(response), 200
 
+@app.route('/is_valid', methods=['GET'])
+def is_chain_valid():
+    response = {
+        'is_chain_valid': 'true' if blockchain.is_chain_valid(blockchain.chain) else 'false'
+    }
+    return jsonify(response), 200
+
 app.run(host = '0.0.0.0', port = 5000)
 
 
